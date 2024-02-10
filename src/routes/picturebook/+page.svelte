@@ -227,6 +227,10 @@
 		}
 		index--;
 	}
+	function stop() {
+		// @ts-ignore
+		voiceSrc.pause();
+	}
 
 	onMount(() => {
 		// @ts-ignore
@@ -248,7 +252,7 @@
 	{/if}
 	<div class="menu">
 		<a href="/">
-			<button>&#9003;</button>
+			<button on:click={() => stop}>&#9003;</button>
 		</a>
 		<div>
 			<button on:click={() => (showText = !showText)}>&#13026;</button>
