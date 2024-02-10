@@ -1,0 +1,34 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	// background-color: antiquewhite;
+	background-image: url(/img/back-01.jpg);
+}
+// 要素
+a {
+	color: unset;
+	cursor: pointer;
+}
+
+// クラス
+.wapper {
+	padding: 1rem;
+}
+.center {
+	text-align: center;
+}
+.d-block {
+	display: block;
+}
+.d-flex {
+	display: flex;
+}
+// ヘルパー
+.ms-auto {
+	margin-left: auto;
+}
+.pa-1 {
+	padding: 1rem;
+}

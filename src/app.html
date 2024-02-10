@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="/icon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>サンプル</title>
+		<link rel="manifest" href="/manifest.json" />
+		<script>
+			'use strict';
+			registServiceWorker();
+			function registServiceWorker() {
+				if ('serviceWorker' in navigator) {
+					window.addEventListener('load', function () {
+						navigator.serviceWorker.register('/serviceworker.js', { scope: './' }).then(
+							function (registrasion) {
+								console.log('ServiceWorker registration successful with scope', registrasion.scope);
+							},
+							function (err) {
+								console.log('ServiceWorker registration failed', err);
+							}
+						);
+					});
+				}
+			}
+		</script>
+		%sveltekit.head%
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents">%sveltekit.body%</div>
+	</body>
+</html>
