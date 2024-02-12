@@ -1,4 +1,5 @@
 <script>
+	import { goto } from '$app/navigation';
 	import { onMount } from 'svelte';
 
 	const data = [
@@ -230,6 +231,7 @@
 	function stop() {
 		// @ts-ignore
 		voiceSrc.pause();
+		goto('/');
 	}
 
 	onMount(() => {
@@ -251,9 +253,8 @@
 		</div>
 	{/if}
 	<div class="menu">
-		<a href="/">
-			<button on:click={() => stop}>&#9003;</button>
-		</a>
+		<button on:click={stop}>&#9003;</button>
+
 		<div>
 			<button on:click={() => (showText = !showText)}>&#13026;</button>
 			<button on:click={back}>&lt;</button>
@@ -285,7 +286,7 @@
 
 	.text {
 		position: absolute;
-		bottom: 2rem;
+		bottom: 3rem;
 		z-index: 20;
 		display: flex;
 		width: 100%;
@@ -303,8 +304,9 @@
 	.menu {
 		display: flex;
 		justify-content: space-between;
+		margin: 0.5rem;
 		button {
-			font-size: large;
+			font-size: x-large;
 			padding: 0 0.5rem;
 		}
 	}

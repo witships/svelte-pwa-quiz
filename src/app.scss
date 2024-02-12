@@ -11,6 +11,15 @@ a {
 	color: unset;
 	cursor: pointer;
 }
+button {
+	cursor: pointer;
+	&:hover {
+		filter: hue-rotate(130deg);
+	}
+	&:active {
+		filter: invert(1);
+	}
+}
 
 // クラス
 .wapper {

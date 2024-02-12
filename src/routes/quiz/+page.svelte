@@ -42,7 +42,7 @@
 			id: 'Q004',
 			title: '金の謎',
 			question: '10円玉の表はどっち？',
-			img: '',
+			img: '/quiz/10JPY.jpg',
 			answer: ['年号がある方', '年号がない方', 'どちらも表', '表裏は無い'],
 			correct: 1,
 			comment:
@@ -52,7 +52,7 @@
 			id: 'Q005',
 			title: '金の謎',
 			question: '1円玉に描かれている木は何？',
-			img: '',
+			img: '/quiz/1JPY.jpg',
 			answer: ['けやき', 'さくら', 'うめ', '空想の木'],
 			correct: 3,
 			comment: '具体的な木の名前はなく、一円玉を作った造幣局では「若木」と表現しているそうです。'
@@ -81,7 +81,7 @@
 			id: 'Q008',
 			title: '食の謎',
 			question: 'ラーメンを一番食べている都道府県は？',
-			img: '',
+			img: '/quiz/shouyu-ramen.png',
 			answer: ['新潟県', '山形県', '福岡県', '東京都'],
 			correct: 1,
 			comment:
@@ -91,7 +91,7 @@
 			id: 'Q009',
 			title: '食の謎',
 			question: 'シュークリームの「シュー」の意味は？',
-			img: '',
+			img: '/quiz/cream_puff.png',
 			answer: ['キャベツ', 'わた', '雲', 'バラ'],
 			correct: 0,
 			comment:
@@ -101,7 +101,7 @@
 			id: 'Q010',
 			title: '医の謎',
 			question: 'お医者さんが手術のときに緑の服を着るのはなぜ？',
-			img: '',
+			img: '/quiz/surgical_gown.png',
 			answer: ['目を疲れにくくするため', 'リラックスのため', '汚れを目立たなくするため'],
 			correct: 0,
 			comment:
@@ -157,7 +157,12 @@
 
 		<!-- 問題 -->
 		<div>{quiz[quiz_index].title}</div>
-		<div class="question">{quiz[quiz_index].question}</div>
+		<div class="question">
+			{quiz[quiz_index].question}
+			{#if quiz[quiz_index].img}
+				<img src={quiz[quiz_index].img} alt="img" />
+			{/if}
+		</div>
 
 		<!-- 選択肢 -->
 		<div class="answer">
@@ -225,8 +230,12 @@
 
 	.question {
 		margin: auto;
+		text-align: center;
 		overflow: auto;
 		font-size: x-large;
+		img {
+			max-width: 100%;
+		}
 	}
 
 	.answer {
@@ -236,6 +245,7 @@
 		button {
 			font-size: large;
 			padding: 0.5rem;
+			background: #cafbf8;
 		}
 	}
 

@@ -2,9 +2,10 @@
 	import HeaderNav from '$lib/HeaderNav.svelte';
 
 	const items = [
-		{ id: 'quiz', title: 'クイズ', icon: 'icon512-1.png' },
+		{ id: 'quiz', title: 'クイズ', icon: 'icon512-3.png' },
 		{ id: 'calc-01', title: 'たし算1', icon: 'icon512-1.png' },
-		{ id: 'picturebook', title: '絵本', icon: 'icon512-1.png' }
+		{ id: 'calc-02', title: 'かけ算', icon: 'icon512-1.png' },
+		{ id: 'picturebook', title: '絵本', icon: 'icon512-2.png' }
 	];
 </script>
 
@@ -25,7 +26,7 @@
 <style lang="scss">
 	.grid {
 		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+		grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
 		gap: 1rem;
 		a {
 			cursor: pointer;

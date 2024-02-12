@@ -2,9 +2,11 @@
 	"short_name": "myapp-PWA",
 	"name": "myapp-PWA",
 	"display": "standalone",
-	"orientation": "portrait",
-	"background_color": "#777777",
 	"start_url": "/",
+	"lang": "ja",
+	"description": "簡単な学習用アプリ",
+	"orientation": "any",
+	"background_color": "#ffffff",
 	"icons": [
 		{
 			"src": "/icon.png",
