@@ -1,5 +1,5 @@
 //キャッシュ名(=バージョン)を指定する
-var CACHE_NAME = 'myapp-v1.1';
+var CACHE_NAME = 'myapp-v1.2';
 //キャッシュするファイル or ディレクトリを指定する
 var urlsToCache = ['/'];
 
@@ -12,6 +12,7 @@ self.addEventListener('install', function (event) {
 		})
 	);
 });
+
 // activate
 self.addEventListener('activate', function (event) {
 	var cacheWhitelist = [CACHE_NAME];
@@ -27,6 +28,7 @@ self.addEventListener('activate', function (event) {
 		})
 	);
 });
+
 // fetch
 self.addEventListener('fetch', function (event) {
 	event.respondWith(
