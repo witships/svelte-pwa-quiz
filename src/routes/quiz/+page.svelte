@@ -160,7 +160,9 @@
 		<div class="question">
 			{quiz[quiz_index].question}
 			{#if quiz[quiz_index].img}
-				<img src={quiz[quiz_index].img} alt="img" />
+				<div>
+					<img src={quiz[quiz_index].img} alt="img" />
+				</div>
 			{/if}
 		</div>
 
@@ -212,6 +214,8 @@
 	main {
 		padding: 1rem;
 		background-color: white;
+		height: calc(100vh - 6rem);
+		overflow: auto;
 		display: flex;
 		flex-direction: column;
 	}
@@ -235,6 +239,7 @@
 		font-size: x-large;
 		img {
 			max-width: 100%;
+			max-height: 30vh;
 		}
 	}
 
