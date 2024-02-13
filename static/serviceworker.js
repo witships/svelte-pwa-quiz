@@ -1,5 +1,5 @@
 //キャッシュ名(=バージョン)を指定する
-var CACHE_NAME = 'myapp-v1.2';
+var CACHE_NAME = 'myapp-v1.3';
 //キャッシュするファイル or ディレクトリを指定する
 var urlsToCache = ['/'];
 

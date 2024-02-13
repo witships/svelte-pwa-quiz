@@ -247,67 +247,89 @@
 			<img src="/book/{animeSrc}" alt="anime" class="anime {setClass}" />
 		{/if}
 	</div>
-	{#if showText}
+	{#if showText && data[index].text}
 		<div class="text">
 			<div>{data[index].text}</div>
 		</div>
 	{/if}
-	<div class="menu">
+	<div class="menu-mid">
+		<button on:click={back}>&lt;</button>
+		<button on:click={next}>&gt;</button>
+	</div>
+	<div class="menu-bottom">
 		<button on:click={stop}>&#9003;</button>
-
-		<div>
-			<button on:click={() => (showText = !showText)}>&#13026;</button>
-			<button on:click={back}>&lt;</button>
-			<button on:click={next}>&gt;</button>
-		</div>
+		<button class="ms-auto" on:click={() => (showText = !showText)}>&#13026;</button>
 		<button on:click={() => (index = 0)}>&orarr;</button>
 	</div>
 </div>
 
 <style lang="scss">
 	.layout {
-		height: 100vh;
 		background-color: #00000090;
-		display: grid;
-		grid-auto-rows: 1fr auto;
 	}
-	img {
-		margin: auto;
-		max-width: 100%;
-		max-height: 100%;
-		position: absolute;
-	}
+
 	.slide {
+		height: 100vh;
 		position: relative;
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		img {
+			margin: auto;
+			max-width: 100%;
+			max-height: 100%;
+			position: absolute;
+		}
 	}
 
 	.text {
 		position: absolute;
-		bottom: 3rem;
+		bottom: 0.5rem;
 		z-index: 20;
 		display: flex;
 		width: 100%;
 		div {
 			max-width: 80%;
 			margin: auto;
-			background-color: #00000090;
+			background-color: #000000a0;
 			color: white;
 			border-radius: 0.5rem;
 			padding: 0.5rem;
-			font-size: large;
+			font-size: x-large;
 			white-space: break-spaces;
 		}
 	}
-	.menu {
+
+	.menu-mid {
+		position: absolute;
+		top: 50%;
+		width: 100%;
 		display: flex;
 		justify-content: space-between;
-		margin: 0.5rem;
+		button {
+			font-size: x-large;
+			margin: 0 0.5rem;
+			padding: 0.5rem;
+			background-color: #00000099;
+			color: white;
+			border-radius: 0.5rem;
+		}
+	}
+
+	.menu-bottom {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		display: flex;
+		padding: 0.5rem;
+		box-sizing: border-box;
+		z-index: 30;
 		button {
 			font-size: x-large;
 			padding: 0 0.5rem;
+			background-color: #00000099;
+			color: white;
+			border-radius: 0.5rem;
 		}
 	}
 
