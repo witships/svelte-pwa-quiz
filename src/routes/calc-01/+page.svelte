@@ -54,8 +54,6 @@
 
 <style lang="scss">
 	.wapper {
-		max-width: 800px;
-		margin: 0 auto;
 		height: 100vh;
 		box-sizing: border-box;
 		display: grid;
@@ -64,6 +62,8 @@
 	}
 
 	main {
+		max-width: 800px;
+		margin: 0 auto;
 		background-color: white;
 		padding: 0.5rem;
 		display: grid;

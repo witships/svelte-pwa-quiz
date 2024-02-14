@@ -7,6 +7,7 @@
 	let num_index = 0;
 	const tenkey = [7, 8, 9, 4, 5, 6, 1, 2, 3, 0];
 	let showCheat = true;
+	let showCheat2 = true;
 
 	function onKeyDown(e) {
 		// console.log(e.key);
@@ -67,7 +68,10 @@
 	<main>
 		<div class="d-flex">
 			<h2>かけ算</h2>
-			<button class="ms-auto" on:click={() => (showCheat = !showCheat)}>カンニング</button>
+			<div class="ms-auto">
+				<button on:click={() => (showCheat = !showCheat)}>カンニング1</button>
+				<button on:click={() => (showCheat2 = !showCheat2)}>カンニング2</button>
+			</div>
 		</div>
 		<table class="table">
 			<tr>
@@ -92,7 +96,9 @@
 						{#each Array(num[0]) as col, xi}
 							<div class="apple">
 								<img src="/img/apple150.png" alt="apple" />
-								<div>{yi * num[0] + xi + 1}</div>
+								{#if showCheat2}
+									<div>{yi * num[0] + xi + 1}</div>
+								{/if}
 							</div>
 						{/each}
 					</div>
@@ -113,8 +119,6 @@
 
 <style lang="scss">
 	.wapper {
-		max-width: 800px;
-		margin: 0 auto;
 		height: 100vh;
 		overflow: hidden;
 		box-sizing: border-box;
@@ -122,6 +126,8 @@
 	}
 
 	main {
+		max-width: 800px;
+		margin: 0 auto;
 		background-color: white;
 		padding: 0.5rem;
 		height: calc(100vh - 5rem);
