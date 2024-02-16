@@ -4,7 +4,11 @@
 }
 body {
 	// background-color: antiquewhite;
-	background-image: url(/img/back-01.jpg);
+	background-image: url(/img/beach02.png);
+	background-position: center;
+	background-size: cover;
+	height: 100vh;
+	overflow: hidden;
 }
 // 要素
 a {
