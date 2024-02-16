@@ -1,5 +1,4 @@
 {
-	"$schema": "https://json.schemastore.org/web-manifest-combined.json",
 	"name": "myapp-PWA",
 	"short_name": "myapp-PWA",
 	"display": "standalone",

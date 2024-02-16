@@ -257,7 +257,7 @@
 
 	.correct-area {
 		position: absolute;
-		bottom: 2rem;
+		bottom: 1.5rem;
 		width: 100%;
 		padding: 0 1rem;
 		box-sizing: border-box;

@@ -15,9 +15,9 @@
 	<div class="grid">
 		{#each items as item}
 			<a href="/{item.id}" class="card">
-				<div>{item.title}</div>
 				<!-- <img src="https://picsum.photos/200/200" alt="icon" /> -->
 				<img src="/img/{item.icon}" alt="icon" />
+				<div>{item.title}</div>
 			</a>
 		{/each}
 	</div>
@@ -26,10 +26,17 @@
 <style lang="scss">
 	.grid {
 		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+		grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
 		gap: 1rem;
 		a {
 			cursor: pointer;
+			text-align: center;
+			white-space: nowrap;
+			text-decoration: none;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			font-size: large;
+			font-weight: bold;
 			transition: 0.5s;
 			&:hover {
 				filter: brightness(0.7);

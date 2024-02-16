@@ -1,5 +1,6 @@
 <script>
 	import { goto } from '$app/navigation';
+	import HeaderNav from '$lib/HeaderNav.svelte';
 	import { onMount } from 'svelte';
 
 	const data = [
@@ -252,6 +253,9 @@
 			<div>{data[index].text}</div>
 		</div>
 	{/if}
+	<div class="menu-top">
+		<HeaderNav />
+	</div>
 	<div class="menu-mid">
 		<button on:click={back}>&lt;</button>
 		<button on:click={next}>&gt;</button>
@@ -299,7 +303,11 @@
 			white-space: break-spaces;
 		}
 	}
-
+	.menu-top {
+		position: absolute;
+		top: 0;
+		margin: 0.5rem;
+	}
 	.menu-mid {
 		position: absolute;
 		top: 50%;
@@ -308,8 +316,8 @@
 		justify-content: space-between;
 		button {
 			font-size: x-large;
-			margin: 0 0.5rem;
-			padding: 0.5rem;
+			margin: 0 0.3rem;
+			padding: 0.3rem;
 			background-color: #00000099;
 			color: white;
 			border-radius: 0.5rem;
@@ -321,12 +329,12 @@
 		bottom: 0;
 		width: 100%;
 		display: flex;
-		padding: 0.5rem;
+		padding: 0.3rem;
 		box-sizing: border-box;
 		z-index: 30;
 		button {
 			font-size: x-large;
-			padding: 0 0.5rem;
+			// padding: 0 0.5rem;
 			background-color: #00000099;
 			color: white;
 			border-radius: 0.5rem;

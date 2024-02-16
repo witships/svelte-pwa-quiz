@@ -7,7 +7,7 @@
 	let num_index = 0;
 	const tenkey = [7, 8, 9, 4, 5, 6, 1, 2, 3, 0];
 	let showCheat = true;
-	let showCheat2 = true;
+	let showCheat2 = false;
 
 	function onKeyDown(e) {
 		// console.log(e.key);
