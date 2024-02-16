@@ -117,6 +117,7 @@
 	// 問題番号
 	function jump(i) {
 		quiz_index = i;
+		isCorrect = false;
 	}
 
 	// 正誤判定
