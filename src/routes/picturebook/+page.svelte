@@ -422,8 +422,8 @@
 	}
 	@keyframes shake {
 		0% {
-			-webkit-transform: translate(0%, 0%);
-			transform: translate(0%, 0%);
+			-webkit-transform: translate(0%, 0%) rotatex(20deg);
+			transform: translate(0%, 0%) rotatex(20deg);
 		}
 		50% {
 			-webkit-transform: translate(-2%, 0%);
